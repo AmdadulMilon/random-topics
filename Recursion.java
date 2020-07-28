@@ -5,6 +5,7 @@ public class Recursion {
 
         System.out.println("Sum of Natural Num: "+sumOf(5));
         System.out.println("Multiplication of Number: "+pow(3,9));
+        System.out.println("Path method: "+path(4,4));
 
     }
     // First Recursion Sum of Natural Numbers
@@ -20,5 +21,12 @@ public class Recursion {
             return 1;
         else
             return a * pow(a,b-1);
+    }
+    // Path function add
+    static int path(int n, int m){
+        if (n == 1 || m == 1)
+            return 1;
+        else
+            return path(n,m-1) + path(m, n-1);
     }
 }
